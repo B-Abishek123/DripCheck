@@ -12,7 +12,7 @@ import base64
 import numpy as np
 from groq import Groq
 import os
-from dotenv import loadenv
+from dotenv import load_dotenv
 
 def ai_model1(frame, user_data=None, occasion="casual"):
 
