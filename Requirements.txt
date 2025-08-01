@@ -2,3 +2,4 @@ flask
 cv2
 numpy
 groq
+python-dotenv
