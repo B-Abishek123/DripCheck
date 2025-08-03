@@ -5,7 +5,7 @@ Generate a imagination(using ai maybe in ghibli style) of how the user looks aft
 
 Space to enter user's dress in the wardrobe and pick best combination and suggest improvements from clothes available.
 '''
-
+import cv2
 import time
 import base64
 import numpy as np
