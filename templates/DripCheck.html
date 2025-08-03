@@ -7,6 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
     #resultsPage { display: none; }
     #mainContent { display: block; }
         /* Camera Modal Styles */
@@ -20,9 +26,8 @@
         .camera-container {
             width: 100%;
             margin: 0 auto;
-            margin-bottom: 100;
             text-align: center;
-            padding: 20px 0;
+            padding: 0px;
         }
         
         .camera-placeholder {
@@ -39,6 +44,7 @@
             margin: 0 auto 25px;
             transition: all 0.3s ease;
             position: relative;
+            gap: 0px;
             overflow: hidden;
         }
         
@@ -48,7 +54,7 @@
             right: 20px;
             background: rgba(0, 0, 0, 0.6);
             color: white;
-            font-size: 2.5rem;
+            font-size: clamp(1rem, 2vw + 0.5rem, 2.5rem);
             font-weight: bold;
             width: 80px;
             height: 80px;
@@ -71,7 +77,7 @@
             color: white;
             padding: 15px 30px;
             border-radius: 8px;
-            font-size: 1.5rem;
+            font-size: clamp(0.6rem, 1.5vw + 1rem, 1.5rem);
             z-index: 10;
             display: none;
             animation: fadeInOut 2s ease-in-out;
@@ -122,7 +128,7 @@
         }
         
         .timer-value {
-            font-size: 1.2rem;
+            font-size: clamp(0.5rem, 1.21vw + 1rem, 1.21rem);
             font-weight: 600;
             color: var(--primary-cta);
             margin-left: 10px;
@@ -137,7 +143,7 @@
             border-radius: 12px;
             color: white;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: clamp(0.5rem, 1.1vw + 1rem, 1.1rem);
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             position: relative;
@@ -167,7 +173,7 @@
         }
         
         .submit-btn i {
-            font-size: 18px;
+            font-size: clamp(0.5rem, 1.1vw + 1rem, 1.1rem);
             transition: transform 0.3s ease;
         }
         
@@ -177,7 +183,7 @@
         
         .capture-btn {
             padding: 20px 40px;
-            font-size: 1.2rem;
+            font-size: clamp(0.6rem, 1.21vw + 1rem, 1.2rem);
             background: linear-gradient(45deg, #ff416c, #ff4b2b);
             border: none;
             border-radius: 50px;
@@ -249,7 +255,7 @@
 
         .logo {
             font-family: 'Kalam', cursive;
-            font-size: 28px;
+            font-size: clamp(0.6rem, 1.21vw + 1rem, 1.21rem);
             font-weight: 700;
             color: var(--primary-cta);
             text-decoration: none;
@@ -268,7 +274,7 @@
             background: var(--gradient);
             border: none;
             color: white;
-            font-size: 18px;
+            font-size: clamp(0.6rem, 1vw + 1rem, 1rem);
             cursor: pointer;
             transition: all 0.3s ease;
             position: relative;
@@ -311,7 +317,7 @@
         }
 
         .panel-header {
-            font-size: 20px;
+            font-size: clamp(0.6rem, 1vw + 1rem, 1rem);
             font-weight: 600;
             color: var(--primary-cta);
             margin-bottom: 20px;
@@ -333,7 +339,7 @@
             justify-content: center;
             margin: 0 auto 15px;
             color: white;
-            font-size: 32px;
+            font-size: clamp(0.8rem, 1.3vw + 1rem, 1.3rem);
         }
 
         .user-name {
@@ -370,7 +376,12 @@
 
         /* Main Content */
         .main-content {
-            margin-top: 80px;
+            width: 100%;
+            max-width: none;
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 0;
+            padding-right: 0;
         }
 
         .section {
@@ -380,6 +391,12 @@
             align-items: center;
             justify-content: center;
             padding: 50px 20px;
+            width: 100%;
+            max-width: none;
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 0;
+            padding-right: 0;
         }
 
         /* Welcome Section */
@@ -401,6 +418,12 @@
             align-items: center;
             padding: 2rem;
             box-sizing: border-box;
+            width: 100%;
+            max-width: none;
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 0;
+            padding-right: 0;
         }
         
         .welcome-section::before {
@@ -412,6 +435,12 @@
             bottom: 0;
             background: rgba(0, 0, 0, 0.3);
             z-index: 1;
+            width: 100%;
+            max-width: none;
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 0;
+            padding-right: 0;
         }
         
         .welcome-section > * {
@@ -424,27 +453,9 @@
             box-sizing: border-box;
         }
         
-        .welcome-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: transparent;
-            z-index: 1;
-        }
-        
-        .welcome-section > * {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
         .welcome-title {
             font-family: 'Kalam', cursive;
-            font-size: 5.5rem;
+            font-size: clamp(2rem, 5.5vw + 1rem, 5.5rem);
             font-weight: 700;
             color: var(--primary-cta);
             margin-top: 0px;
@@ -455,7 +466,7 @@
         }
 
         .welcome-subtitle {
-            font-size: 1.3rem;
+            font-size: clamp(0.5rem, 1.3vw + 1rem, 1.3rem);
             color: var(--primary-text);
             margin-bottom: 80px;
             font-weight: 200;
@@ -468,7 +479,7 @@
 
 
         .welcome-subtitle1 {
-            font-size: 1.8rem;
+            font-size: clamp(0.6rem, 1.8vw + 1rem, 1.8rem);
             color: var(--primary-text);
             margin-bottom: 50px;
             font-weight: 400;
@@ -486,7 +497,7 @@
 
         .action-btn {
             padding: 20px 40px;
-            font-size: 1.3rem;
+            font-size: clamp(0.65rem, 1.3vw + 1rem, 1.3rem);
             font-weight: 600;
             border: 3px solid #000;
             border-radius: 20px;
@@ -529,7 +540,7 @@
 
         .action-btn i {
             margin-right: 12px;
-            font-size: 1.2em;
+            font-size: clamp(0.6rem, 1.2vw + 1rem, 1.2rem);
         }
 
         /* Outfit Upload Section */
@@ -539,10 +550,11 @@
 
         .outfit-title {
             font-family: 'Kalam', cursive;
-            font-size: 7rem;
+            font-size: clamp(3.5rem, 7vw + 1rem, 7rem);
             font-weight: 700;
             color: var(--primary-cta);
-            margin-bottom: 40px;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
             text-align: center;
             text-shadow: -3px -1px 2px rgba(0, 0, 0, 0.8);
         }
@@ -557,7 +569,7 @@
 
         .outfit-btn {
             padding: 25px 45px;
-            font-size: 1.4rem;
+            font-size: clamp(0.7rem, 1.4vw + 1rem, 1.4rem);
             font-weight: 600;
             border: 3px solid var(--primary-cta);
             border-radius: 20px;
@@ -607,7 +619,7 @@
         }
 
         .outfit-rating {
-            font-size: 4rem;
+            font-size: clamp(2rem, 4vw + 1rem, 4rem);
             font-weight: 700;
             color: var(--primary-cta);
             margin-bottom: 20px;
@@ -622,7 +634,7 @@
         }
 
         .rating-label {
-            font-size: 1.5rem;
+            font-size: clamp(0.7rem, 1.5vw + 1rem, 1.5rem);
             color: var(--primary-text);
             margin-bottom: 30px;
         }
@@ -637,7 +649,7 @@
 
         .result-home-btn {
             padding: 20px 40px;
-            font-size: 1.2rem;
+            font-size: clamp(0.7rem, 1.2vw + 1rem, 1.2rem);
             font-weight: 600;
             border: 3px solid var(--primary-cta);
             border-radius: 20px;
@@ -656,7 +668,7 @@
 
         .result-btn {
             padding: 20px 40px;
-            font-size: 1.2rem;
+            font-size: clamp(0.7rem, 1.2vw + 1rem, 1.2rem);
             font-weight: 600;
             border: 3px solid var(--primary-cta);
             border-radius: 20px;
@@ -704,7 +716,7 @@
             font-family: 'Kalam', cursive;
             color: var(--primary-cta);
             margin-bottom: 15px;
-            font-size: 1.8rem;
+            font-size: clamp(0.7rem, 1.8vw + 1rem, 1.8rem);
         }
 
         .captured-outfit-image {
@@ -723,7 +735,7 @@
 
         .improvements-title {
             font-family: 'Kalam', cursive;
-            font-size: 2rem;
+            font-size: clamp(1rem, 2vw + 1rem, 2rem);
             color: var(--primary-cta);
             margin-bottom: 25px;
             text-align: left;
@@ -769,10 +781,12 @@
             background: white;
             border-radius: 25px;
             padding: 40px;
+            padding-top: 0px;
             max-width: 600px;
             width: 90%;
             max-height: 80vh;
             overflow-y: auto;
+            gap: 0px;
         }
 
         .modal-header {
@@ -782,9 +796,10 @@
 
         .modal-title {
             font-family: 'Kalam', cursive;
-            font-size: 2.5rem;
+            font-size: clamp(1rem, 2.5vw + 1rem, 2.5rem);
             color: var(--primary-cta);
-            margin-bottom: 10px;
+            margin-bottom: 0px;
+            padding-top: 20px;
         }
 
         .close-btn {
@@ -895,7 +910,7 @@
         }
 
         .loading-text {
-            font-size: 1.5rem;
+            font-size: clamp(0.8rem, 1.5vw + 1rem, 1.5rem);
             color: var(--primary-cta);
             font-weight: 600;
         }
@@ -977,7 +992,7 @@
         .sidebar-title {
             font-family: 'Inter', 'Poppins', sans-serif;
             font-weight: 600;
-            font-size: 1.5rem;
+            font-size: clamp(0.8rem, 1.5vw + 1rem, 1.5rem);
             color: var(--primary-cta);
             margin-bottom: 15px;
         }
@@ -1040,15 +1055,17 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .welcome-title {
-                font-size: 5rem;
+                font-size: clamp(3rem, 5vw + 1rem, 5rem);
             }
 
             .welcome-subtitle {
-                font-size: 1.3rem;
+                font-size: clamp(0.8rem, 1.3vw + 1rem, 1.3rem);
             }
 
             .outfit-title {
-                font-size: 5rem;
+                font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
+                padding-bottom: 0px;
+                margin-bottom: 0px;
             }
 
             .action-buttons {
@@ -1105,7 +1122,7 @@
             color: #fff;
             border: none;
             border-radius: 10px;
-            font-size: 2rem;
+            font-size: clamp(1rem, 2vw + 1rem, 2rem);
             padding: 12px 0;
             cursor: pointer;
             transition: background 0.2s;
@@ -1117,7 +1134,7 @@
             align-items: center;
             margin: 18px 0 18px 0;
             color: #fff;
-            font-size: 1.1rem;
+            font-size: clamp(0.5rem, 1.1vw + 1rem, 1.1rem);
         }
         .login-divider span {
             margin: 0 12px;
@@ -1137,7 +1154,7 @@
             color: #2C3E50;
             border: none;
             margin-bottom: 16px;
-            font-size: 1.1rem;
+            font-size: clamp(0.5rem, 1.1vw + 1rem, 1.1rem);
         }
         .login-input::placeholder {
             color: #888;
@@ -1152,7 +1169,7 @@
         .remember-label {
             display: flex;
             align-items: center;
-            font-size: 1.1rem;
+            font-size: clamp(0.5rem, 1.1vw + 1rem, 1.1rem);
             cursor: pointer;
             color: #fff;
             font-family: 'Fira Mono', 'Consolas', monospace;
@@ -1187,7 +1204,7 @@
         }
         .forgot-link {
             color: #888;
-            font-size: 1rem;
+            font-size: clamp(0.5rem, 1.1vw + 1rem, 1.1rem);
             text-decoration: none;
             transition: color 0.2s;
         }
@@ -1196,7 +1213,7 @@
             background: #181A1B;
             color: #fff;
             font-family: 'Fira Mono', 'Consolas', monospace;
-            font-size: 1.2rem;
+            font-size: clamp(0.6rem, 1.2vw + 1rem, 1.2rem);
             margin-top: 8px;
             margin-bottom: 8px;
             display: flex;
@@ -1209,7 +1226,7 @@
             text-align: center;
             margin-top: 10px;
             color: #aaa;
-            font-size: 1rem;
+            font-size: clamp(0.5rem, 1.1vw + 1rem, 1.1rem);
         }
         #toggleLink { color: #FFD600; cursor: pointer; text-decoration: underline; }
         #toggleLink:hover { color: #fff; }
@@ -1236,13 +1253,13 @@
 
         .section-title{
             font-family: 'Kalam', cursive;
-            font-size: 4.5rem;
+            font-size: clamp(2.8rem, 5vw + 1rem, 5rem);
             text-align: center;
             color: var(--primary-cta);
         }
 
         #bodyDetailsTitle{
-            padding-bottom: 40px;
+            padding-bottom: 0px;
             text-shadow: 1px 1.5px 2px rgba(0, 0, 0, 0.7);
         }
             
@@ -1262,18 +1279,13 @@
         }
     }
 
-    section{
-        width: 100%;
-    }
-
     .footer{
         background-color: #eae49f;
-        height: 20%;
     }
 
     .footer-title {
         font-family: 'Kalam', cursive;
-        font-size: 10rem;
+        font-size: clamp(5rem, 10vw + 1rem, 10rem);
         text-align: center;
         font-weight: bold;
         margin-bottom: 0px;
@@ -1289,13 +1301,13 @@
     .footer-content{
         font-family: 'Inter', 'Poppins', sans-serif;
         text-align: center;
-        font-size: 0.6rem;
+        font-size: clamp(0.3rem, 0.6vw + 1rem, 0.6rem);
         color: #000000;
     }
 
     .footer-name{
         color: grey;
-        font-size: 1rem;
+        font-size: clamp(0.3rem, 0.8vw + 1rem, 0.8rem);
         margin-right: 20px;
         font-family: 'Fira Mono', 'Consolas', monospace;
         text-align: right;
@@ -1304,13 +1316,38 @@
 
     .footer-email{
         color: grey;
-        font-size: 1rem;
+        font-size: clamp(0.3rem, 0.8vw + 1rem, 0.8rem);
         margin-right: 20px;
         margin-left:0px;
         font-family: 'Fira Mono', 'Consolas', monospace;
         text-align: right;
     }
 
+    #mainContent{
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .body-details-subtitle{
+        font-size: clamp(0.4rem, 1vw + 1rem, 1rem);
+        text-align: center;
+        color: var(--primary-text);
+        padding-bottom: 50px;
+    }
+
+    .outfit-subtitle{
+        padding-top: 0px;
+        margin-top: 0px;
+        font-size: clamp(0.5rem, 1vw + 1rem, 1rem);    
+        text-align: center;
+        color: var(--primary-text);
+        padding-bottom: 40px;
+    }
+
+    .section{
+        width: 100%;
+    }
 
 </style>
 </head>
@@ -1406,6 +1443,7 @@
         <!-- Body Details Section -->
         <section class="section body-details-section">
             <h2 class="section-title" id="bodyDetailsTitle">Update your Body Details</h2>
+            <p class="body-details-subtitle">Place your face and upper body in the frame for better results.</p>
             <div class="outfit-buttons" id="bodyDetailsButtons">
                 <button class="outfit-btn" onclick="captureRealTime()">
                     <i class="fas fa-camera"></i>
@@ -1425,6 +1463,7 @@
         <!-- Outfit Upload Section -->
         <section class="section outfit-section" id="outfitSection">
             <h2 class="outfit-title">Strike a Pose</h2>
+            <p class="outfit-subtitle">Frame your outfit in the camera.</p>
             <div class="outfit-buttons">
                 <button class="outfit-btn" onclick="captureOutfit()">
                     <i class="fas fa-camera"></i>
@@ -1508,8 +1547,8 @@
                 <canvas id="outfitCameraCanvas" style="display: none; max-width: 100%; border-radius: 16px;"></canvas>
                 <div id="outfitCameraPlaceholder" class="camera-placeholder">
                     <i class="fas fa-tshirt" style="font-size: 64px; margin-bottom: 20px; color: var(--primary-cta);"></i>
-                    <p style="font-size: 1.1rem; margin-bottom: 5px;">Camera access is required to capture your outfit</p>
-                    <p style="font-size: 0.9rem; color: #6c757d;">We'll ask for permission to use your camera</p>
+                    <p style="font-size: clamp(0.4rem, 1.1vw + 1rem, 1.1rem); margin-bottom: 5px;">Camera access is required to capture your outfit</p>
+                    <p style="font-size: clamp(0.5rem, 1vw + 1rem, 1rem); color: #6c757d;">We'll ask for permission to use your camera</p>
                 </div>
                 
                 <!-- Timer Settings -->
@@ -1553,7 +1592,7 @@
             <button class="close-btn" id="cameraCloseBtn">&times;</button>
             <div class="modal-header">
                 <h2 class="modal-title">Capture Now</h2>
-                <p>Allow camera access to capture your Body Details in Real Time</p>
+                <p>Place your face and upper body in the frame for better results.</p>
             </div>
             <div class="camera-container">
                 <div style="position: relative; display: inline-block; width: 100%; max-height: 60vh; overflow: hidden; border-radius: 16px;">
@@ -1563,8 +1602,8 @@
                 <canvas id="cameraCanvas" style="display: none; max-width: 100%; border-radius: 16px;"></canvas>
                 <div id="cameraPlaceholder" class="camera-placeholder">
                     <i class="fas fa-camera" style="font-size: 64px; margin-bottom: 20px; color: var(--primary-cta);"></i>
-                    <p style="font-size: 1.1rem; margin-bottom: 5px;">Camera access is required to capture your outfit</p>
-                    <p style="font-size: 0.9rem; color: #6c757d;">We'll ask for permission to use your camera</p>
+                    <p style="font-size: clamp(0.4rem, 1.1vw + 1rem, 1.1rem); margin-bottom: 5px;">Camera access is required to capture your outfit</p>
+                    <p style="font-size: clamp(0.5rem, 1.2vw + 1rem, 1.2rem); color: #6c757d;">We'll ask for permission to use your camera</p>
                 </div>
                 
                 <!-- Timer Settings -->
@@ -1725,7 +1764,7 @@
                     </label>
                     <a href="#" class="forgot-link" onclick="forgotPassword()">forgot password?</a>
                 </div>
-                <div id="loginError" style="color:#e53e3e; font-size:1rem; margin-bottom:8px; display:none;"></div>
+                <div id="loginError" style="color:#e53e3e; font-size:clamp(0.5rem, 1vw + 1rem, 1rem); margin-bottom:8px; display:none;"></div>
                 <button type="submit" class="submit-btn login-btn"><i class="fas fa-sign-in-alt"></i> <span id="loginBtnText">sign in</span></button>
             </form>
             <div class="login-toggle">
